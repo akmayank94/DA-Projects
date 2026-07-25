@@ -159,7 +159,7 @@ The Ratings page uses **bookmarks** to switch between two views without a second
     ├── 01-Overview.png
     ├── 02-Ratings.png
     ├── 03-Reviews.png
-    ├── data-model.png
+    └── data-model.png
 └── End to End Airbnb Performance Dashboard.pdf
 ```
 
@@ -167,7 +167,7 @@ The `.pbix` file and raw source CSVs aren't in this repo (Power BI's cache pushe
 
 ## 📥 Full Files (.pbix + raw data)
 
-- **Full project files (.pbix + raw CSVs):** [Google Drive folder](https://drive.google.com/drive/folders/1znczvY8IyM21H1SIlTvYMkasKgMpdaJn?usp=sharing)
+- **Full project files (.pbix + raw CSVs):** [Google Drive folder](https://drive.google.com/drive/folders/196FdT2RhkCra9vi3ZG6638kkp_zNVGUA?usp=drive_link)
 - **Raw dataset source:** [Maven Analytics Data Playground](https://mavenanalytics.io/data-playground)
 
 ## 🙏 Credits
