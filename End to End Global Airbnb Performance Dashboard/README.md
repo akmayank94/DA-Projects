@@ -2,7 +2,7 @@
 
 Interactive Power BI dashboard analyzing **2,79,712 Airbnb listings**, **1,82,024 hosts**, and **5.37M reviews** across 10 global cities (2008–2020), covering market share, pricing, host trust, and review behavior.
 
-![Overview](Dashboard Screenshots/01-Overview.png)
+![Overview](dashboard_screenshots/01-Overview.png)
 
 ## 📌 Project Overview
 
@@ -22,7 +22,7 @@ Built using the public **[Airbnb Listings & Reviews dataset](https://mavenanalyt
 
 **Relationship:** `Listings[listing_id]` (1) → `Reviews[listing_id]` (*)
 
-![Data Model](assets/screenshots/data-model.png)
+![Data Model](dashboard_screenshots/data-model.png)
 
 ## 🧮 DAX Measures & Calculated Columns
 
@@ -57,8 +57,6 @@ Built using the public **[Airbnb Listings & Reviews dataset](https://mavenanalyt
 | `Review Month` | Calc. column | `FORMAT(Reviews[date], "MMM")` | Month name label shown on the axis |
 
 ### Highlighted formulas
-
-The Market Share and Review Frequency charts are both **Pareto (ranked cumulative %) patterns** — rank the dimension, running-total up to that rank, then divide by the grand total:
 
 ```dax
 City Rank =
@@ -121,13 +119,13 @@ DIVIDE(
 KPI cards (listings, cities, hosts, property types, reviews) plus a new-listings lifecycle line chart, 2008–2020, annotated across Introduction → Growth → Maturity → Decline → Reinvention → COVID-19 phases.
 
 ### 2. Ratings
-![Ratings page](assets/screenshots/02-market-share-pricing.png)
+![Ratings page](dashboard_screenshots/02-Ratings.png)
 - **Market Share by City** — combo chart: `city` (X-axis), `Superhost Listings` / `No Superhost Listings` (stacked columns), `Cumulative %` (line) — the Pareto pattern above
 - **Average Price by Room Type** — bar chart: `Room Type` (Y-axis) vs `Average Price` (X-axis)
 - **Ratings table** — matrix: `City` (rows) × `Accuracy`, `Cleanliness`, `Communication`, `Location`, `Value` (values), conditional formatting
 
 ### 3. Reviews
-![Reviews page](assets/screenshots/03-reviews-trust.png)
+![Reviews page](dashboard_screenshots/03-Reviews.png)
 - **Review Frequency** — combo chart: `Reviews per Reviewer` (X-axis), `Reviewers` (column Y-axis), `% review frequency` (line Y-axis) — same Pareto pattern, filtered by `Show in Review Frequency Chart`
 - **Seasonality** — streamgraph: `Review Month` (X-axis), `% of Monthly Reviews` (Y-axis), `City` (legend)
 - **Trust shield** — host verification breakdown using the `Verified_*` / `NotVerified_*` measures
@@ -157,6 +155,12 @@ The Ratings page uses **bookmarks** to switch between two views without a second
 └── assets/
     ├── Airbnb_Performance_Dashboard.pdf     # full dashboard export
     └── screenshots/                          # page-by-page + data model images used above
+└── dashboard_screenshots/
+    ├── 01-Overview.png
+    ├── 02-Ratings.png
+    ├── 03-Reviews.png
+    ├── data-model.png
+└── End to End Airbnb Performance Dashboard.pdf
 ```
 
 The `.pbix` file and raw source CSVs aren't in this repo (Power BI's cache pushes it to ~200MB, well past what a git repo should carry) — linked below instead.
