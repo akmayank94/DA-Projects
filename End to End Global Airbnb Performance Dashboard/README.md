@@ -6,12 +6,12 @@ Interactive Power BI dashboard analyzing **2,79,712 Airbnb listings**, **1,82,02
 
 ## 📌 Project Overview
 
-Built using the public **[Airbnb Listings & Reviews dataset](https://mavenanalytics.io/data-playground)** from Maven Analytics. The dataset arrived pre-cleaned, so the focus here was the data model, DAX layer, and dashboard/UX design rather than data cleaning.
+Built using the public **[Airbnb Listings & Reviews dataset](https://mavenanalytics.io/data-playground/airbnb-listings-reviews)** from Maven Analytics. The dataset arrived pre-cleaned, so the focus here was the data model, DAX layer, and dashboard/UX design.
 
 **What this covers:**
 - Modeled two source tables (`Listings`, `Reviews`) with a one-to-many relationship on `listing_id`
 - Wrote **26 DAX measures** on the `Listings` table and **10 DAX measures/calculated columns** on the `Reviews` table (full list below)
-- Built a 3-page report (**Overview → Ratings → Reviews**) with bookmark-driven interactivity on the Reviews page
+- Built a 3-page report (**Overview → Ratings → Reviews**) with bookmark-driven interactivity on the Ratings page
 
 ## 🗂️ Dataset
 
@@ -134,7 +134,7 @@ KPI cards (listings, cities, hosts, property types, reviews) plus a new-listings
 
 ## 🔖 Interactivity
 
-The Reviews page uses **bookmarks** to switch between two views without a second page:
+The Ratings page uses **bookmarks** to switch between two views without a second page:
 - **Ctrl + click the ⭐ star** → high-level overview view
 - **Ctrl + click the 🔍 magnifying glass** → detailed table view
 
